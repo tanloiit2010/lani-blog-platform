@@ -71,7 +71,7 @@ Now you can visit [`localhost:4000`](http://localhost:3000) from your browser.
 7. `mix phx.server`
 
 #### Frontend Steps:
-1. cd `lani_blog_web`
+1. `cd lani_blog_web`
 2. `cp .env.example .env.local`
 3. `yarn install` or `npm install`
 4. `yarn dev` or `npm run dev`
