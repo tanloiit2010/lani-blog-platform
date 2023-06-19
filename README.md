@@ -1,11 +1,13 @@
 
 # Lani Blog Platform
 
-A Blog Platform build on Elixir Phoenix and Nextjs,
+A Blog Platform build on Elixir Phoenix and Nextjs.
 
 ## Features
 Provide the list of basic features for a blog platform
-
+-  **Authentication:**
+  - Sign in
+	- Sign up
 -  **Anonymous users:**
 	- View list of latest posts
 	- View post detail
@@ -20,7 +22,8 @@ Provide the list of basic features for a blog platform
  - Phoenix framework
  - Pow-Auth
  - Ecto
- - Nextjs
+ - Next.js
+ - NextAuth.js
  - Tailwind Css
  - MySQL
  - Docker
