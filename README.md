@@ -6,7 +6,7 @@ A Blog Platform build on Elixir Phoenix and Nextjs.
 ## Features
 Provide the list of basic features for a blog platform
 -  **Authentication:**
-  - Sign in
+	- Sign in
 	- Sign up
 -  **Anonymous users:**
 	- View list of latest posts
