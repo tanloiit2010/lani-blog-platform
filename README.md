@@ -38,7 +38,7 @@ Provide the list of basic features for a blog platform
 2. Run `seed.sql` script from `/lani_blog/priv/repo/seed.sql` into your database
 3. Up api and web service: `docker-compose -f docker-compose.yml up`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Now you can visit [`localhost:4000`](http://localhost:3000) from your browser.
 
 ### Set up local environment
 
@@ -73,4 +73,4 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 3. `yarn install` or `npm install`
 4. `yarn dev` or `npm run dev`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Now you can visit [`localhost:4000`](http://localhost:3000) from your browser.
