@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: ./lani_blog_web
+      args:
+        NEXTAUTH_SECRET: Y/flQBGTnv9UHgEnsj3Elc4Ny/dgBz/ADzd7gAwN01k=
+        NEXTAUTH_URL: http://localhost:3000
+        NEXT_PUBLIC_API_URL: http://127.0.0.1:4000
+        API_URL: http://api:4000
+    restart: always
+    ports:
+      - 3000:3000
+    depends_on:
+      - api
+  api:
+    build: 
+      context: ./lani_blog
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=ecto://root:P@ssw0rd@db/lani_blog_db
+      - SECRET_KEY_BASE=eqb8r1o8unLgK5bGJyBRp1GXhLHb78DqdPpQKISxeZ3ILs6Bg7cJokbVvDXEfE8m
+  db:
+    image: mysql:8.0
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_DATABASE=lani_blog_db
+      - MYSQL_ROOT_PASSWORD=P@ssw0rd
+    ports:
+      - '3307:3306'
+    volumes:
+      - db:/var/lib/mysql
+volumes:
+  db:
+    driver: local
+
